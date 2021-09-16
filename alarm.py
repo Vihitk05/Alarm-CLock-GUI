@@ -4,26 +4,26 @@ from tkinter import *
 
 from pygame import mixer
 
-root = Tk()
-root.title('MyAlarm Clock')
-root.config(bg='lightgreen')
-root.geometry('550x400')
-root.iconbitmap('favicon.ico')
+root = Tk() #Window Initialization
+root.title('MyAlarm Clock') #Title of the window
+root.config(bg='lightgreen') #Setting the Background Color
+root.geometry('550x400') #Setting the default size of the Window
+root.iconbitmap('favicon.ico') # Favicon 
 
-hrs = StringVar()
-mins = StringVar()
+hrs = StringVar() #To Store Value of Hour
+mins = StringVar() #To Store Value of Minutes
 
-
+#To convert the values into a proper Timestamp
 def set_alarm():
     alarmtime = f'{hrs.get()}:{mins.get()}:00'
     if alarmtime != ': :00':
         alarmclock(alarmtime)
 
-
+# Main Function to run the clock
 def alarmclock(alarm_time):
     while True:
         time.sleep(1)
-        time_now = datetime.datetime.now().strftime('%H:%M:%S')
+        time_now = datetime.datetime.now().strftime('%H:%M:%S') #Current Time
         print(time_now)
         if time_now == alarm_time:
             Label(root, text='Wake UP!Wake UP!Wake UP!', bg='lightgreen', font=('arial', 20, 'italic')).grid(padx=20,
@@ -48,4 +48,5 @@ min_entry.grid(padx=1, pady=10, row=4, column=2)
 
 set_btn = Button(root, command=set_alarm, text='Set Alarm', bg='lightgreen', fg='black',
                  font=('arial', 20, 'italic')).grid(padx=40, pady=30, row=7, column=2)
-mainloop()
+mainloop() #Execution of the Window
+# Enjoy Your Personal Self Built Alarm Clock😎😎

@@ -37,7 +37,7 @@ def alarmclock(alarm_time):
             break
 
 
-Label(root, text='Take a Short Nap!', font=('arial', 20, 'italic'), bg='lightgreen').grid(row=1, column=2)
+Label(root, text='Take a Short Nap!Enter the time in 24 HOURS Format', font=('arial', 20, 'italic'), bg='lightgreen').grid(row=1, column=2)
 Label(root, text='Hours:', font=('arial', 20, 'italic'), bg='lightgreen').grid(sticky='e', row=3, column=1)
 Label(root, text='Minutes:', font=('arial', 20, 'italic'), bg='lightgreen').grid(sticky='e', row=4, column=1)
 
